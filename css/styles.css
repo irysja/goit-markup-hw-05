@@ -10,7 +10,7 @@
   --secondary-color-dark-gray: #434455;
   --color-navy: #404bbf;
   --color-light-gray: #8E8F99;
-  --transition: 250ms linear;
+  --transition: 250ms;
   --transition-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -97,7 +97,6 @@ main {
 .icon:hover,
 .icon:focus{
   background-color:#404BBF;
-  border-radius: 50%;
 }
 .social-list-item {
   /*margin-top: 8px;*/
@@ -120,7 +119,7 @@ main {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: color var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .commands {
   display: flex;
@@ -210,18 +209,18 @@ main {
   top: 0;
   width: 100%;
   height: 100%;
-  font-size: 16px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   overflow: auto;
   transform: translate(0 ,100%);
   transition: transform 250ms;
   color: #f4f4fd;
   background-color: #4D5AE5;
   transition-duration:250ms;
-
+  box-shadow: 0px 2px 4px rgba(46, 47, 66, 0.08),0px 2px 4px rgba(46, 47, 66, 0.16), 0px 2px 4px rgba(46, 47, 66, 0.08);
+}
+.appendix-card-img-item:hover,
+.appendix-card-img-item:focus{
+  box-shadow: 0px 2px 4px rgba(46, 47, 66, 0.08),0px 2px 4px rgba(46, 47, 66, 0.16), 0px 2px 4px rgba(46, 47, 66, 0.08);
 }
 .link-appendix-card-item:hover .overlay,
 .link-appendix-card-item:focus .overlay{
@@ -247,9 +246,6 @@ img {
   color: var(--primary-color-dark-gray);
 }
 .logo-web {
-  margin-right: 76px;
-}
-.logo-web {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -257,6 +253,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-color-blue);
   text-transform: uppercase;
+  margin-right: 76px;
 }
 .logo-studio {
   color: var(--primary-color-dark-gray);
@@ -336,7 +333,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--primary-color-dark-gray);
   transition: color var(--transition) cubic-bezier(0.4, 0, 0.2, 1) ;
-  padding-bottom: 30px;
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -486,8 +482,7 @@ img {
   cursor: pointer;
   border-radius:4px;
   border: none;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -609,7 +604,8 @@ img {
   fill: var(--color-light-gray);
 }
 .customers-list-icon {
-  fill: var(--color-light-gray);
+  fill: currentColor;
+  /*fill: var(--color-light-gray);*/
   /*margin-top: 72px;
   margin-bottom: 142px;
   border-radius: 4px;
@@ -620,12 +616,12 @@ img {
   solid :var(--color-light-gray);*/
 }
 .customers-list-link{
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   height: 100%;
-  fill: var(--color-light-gray);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-light-gray);
   border: 1px solid var(--color-light-gray);
   border-radius: 4px;
   box-shadow: 0px 4px 4px  0px rgba(0, 0, 0, 0.25);
@@ -637,18 +633,10 @@ img {
   display: flex;
   box-shadow: 0px 4px rgba (0, 0, 0, 0.25);
 }
-.customers-list-item:hover,
-.customers-list-item:focus,
-.customers-list-icon:hover,
-.customers-list-icon:focus,
 .customers-list-link:hover,
 .customers-list-link:focus {
-  fill: var(--primary-color-blue);
-  border:1px solid var(--primary-color-blue);
-}
-.customers-list-icon:hover,
-.customers-list-icon:focus {
-  border: none;
+  color: var(--primary-color-blue);
+  border-color: var(--primary-color-blue);
 }
 footer {
   padding-top: 100px;
@@ -734,7 +722,7 @@ footer {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: color var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*.linear-gradient-block{
   background-image:repeating-linear-gradient( to right, #ffe5e5, #ffe5e5 72px, transparent 7%, transparent 8%);
